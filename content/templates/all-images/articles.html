@@ -1,5 +1,28 @@
 {%extends 'all-images/base.html'%}
 
 {% block content %}
-{{block.super}}
+
+<div class="container" style="font-family: 'Montserrat', sans-serif;">
+
+    <div class="row">
+        <h1>{{image.image_name}}</h1>
+    </div>
+    <p class="card-text"><strong>Location:</strong> {{image.image_location}}</p>
+    <div class="row block">
+        <p class="card-text">{{image.image_description}}</p>
+    </div>
+
+    <div class="well row" style="color:crimson;">
+        <strong>
+            <p>Posted {{article.pub_date|timesince}} by {{article.editor.first_name}}</p>
+        </strong>
+    </div>
+
+    <div class="well row">
+        <img src="{{image.image.url}}" class="img-responsive" alt="">
+    </div>
+
+
+</div>
+
 {% endblock %}
