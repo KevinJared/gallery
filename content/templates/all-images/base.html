@@ -23,9 +23,26 @@
   {% include "navbar.html" %}
 
   {% block content %}
-  <div style="margin-left: 15%">
-    <h2>Photos</h2>
+  <!-- links -->
+  <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+  <!-- links -->
+
+  <div id="header" class="container-fluid" style="height: 80vh; padding-top: 200px; border-bottom: 1px solid crimson; margin-bottom: 20px;">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-3" style="border-top:double; border-bottom: double; font-family: 'Charmonman', cursive; font-size: 50px;padding:30px ">
+      <p><strong>Gallery</strong></p>
+    </div>
+
   </div>
+  <style>
+    #header {
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  </style>
   {%endblock%}
 
   {% block scripts %}
