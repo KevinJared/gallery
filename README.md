@@ -1,5 +1,4 @@
 # Gallery
-#### This is my Gallery made with 
 #### September 28, 2018
 #### By **Kevin Jared**
 
