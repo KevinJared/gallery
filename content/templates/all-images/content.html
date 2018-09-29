@@ -1,0 +1,47 @@
+{%extends 'all-images/base.html'%}
+
+{% block content %}
+{{ block.super}}
+
+<div class="container-fluid">
+
+    <!-- Looping through content   -->
+    {% for image in images %}
+    <div class="" style="margin-left: 20%;">
+        <div class="card col-md-4" style="margin: 3px; ">
+            <a href="{{image.image.url}}"><img class="card-img-top" src="{{image.image.url}}" class="img-responsive"
+                    alt="" style="width:100%;"></a>
+            <div class="card-body">
+                <h3>{{image.image_name}}</h3>
+
+                <button class="btn btn-info" onclick="copyLink()">copy link</button>
+            </div>
+        </div>
+        <style>
+            .card {
+                box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.4);
+                padding: 5px;
+                height: 320px;
+                width: 300px;
+            }
+
+            .card:hover {
+                box-shadow: 5px 7px 21px rgba(0, 0, 0, 0.56);
+            }
+
+            img {
+                object-fit: cover;
+            }
+        </style>
+    </div>
+
+
+    {% empty %}
+    <div class="row">
+        <h3 class="text-center">There No content Items</h3>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
