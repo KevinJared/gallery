@@ -1,47 +1,74 @@
-{%extends 'all-images/base.html'%}
+{% extends 'all-images/base.html' %}
 
 {% block content %}
-{{ block.super}}
+{{block.super}}
 
-<div class="container-fluid">
+<div class="jumbtron" ;>
+    <!-- displaying images -->
+    <div class="">
+        {% for post in images %}
 
-    <!-- Looping through content   -->
-    {% for image in images %}
-    <div class="" style="margin-left: 20%;">
-        <div class="card col-md-4" style="margin: 3px; ">
-            <a href="{{image.image.url}}"><img class="card-img-top" src="{{image.image.url}}" class="img-responsive"
-                    alt="" style="width:100%;"></a>
-            <div class="card-body">
-                <h3>{{image.image_name}}</h3>
+        <div class="col-md-3">
+            <!-- modal button-->
+            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal{{post.id}}">
+                <img src="{{post.image.url }}" alt="" width="100%" height="270px">
+            </button>
+            <br>
+            <!-- modal -->
+        </div>
 
-                <button class="btn btn-info" onclick="copyLink()">copy link</button>
+
+        {% endfor %}
+    </div>
+</div>
+{% for post in images %}
+<!-- modal content -->
+<div class="modal fade" id="myModal{{post.id}}" role="dialog" >
+    <div class="modal-dialog" >
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="" class="close" data-dismiss="modal">&times;</button>
+                <img src="{{post.image.url }}" alt="" width="100%">
+                <h4 class="modal-title">{{ post.image_description }}</h4>
+            </div>
+
+            <div class="modal-body">
+                {% for category in post.image_category.all %}
+                <p>{{ category.name }}</p>
+                {% endfor %}
+
+                {% for location in post.image_location.all %}
+                <p>{{ location.name }}</p>
+                {% endfor %}
+            </div>
+
+
+            <div class="modal-footer">
+                <input type="text" value="https://twitter.com/intent/tweet?text=http://devdel.kirkesok.no/api/kirke/182800101" id="myInput">
+                <button  type="button" class="btn btn-danger" onclick="myFunction()">Copy link</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>
-        <style>
-            .card {
-                box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.4);
-                padding: 5px;
-                height: 320px;
-                width: 300px;
-            }
-
-            .card:hover {
-                box-shadow: 5px 7px 21px rgba(0, 0, 0, 0.56);
-            }
-
-            img {
-                object-fit: cover;
-            }
-        </style>
     </div>
-
-
-    {% empty %}
-    <div class="row">
-        <h3 class="text-center">There No content Items</h3>
-    </div>
-    {% endfor %}
-
+    <script>
+        function myFunction(){
+            var copyText = document.getElementById("thislinkhere-" + id);
+            copyText.select();
+            document.execCommand("copy");
+            alert("Copied the link: " + copyText.value);
+        }
+    </script>
+    <style>
+        .jumbotron{
+            padding: 5px;
+            margin-bottom: 2px;
+        }
+    </style>
 </div>
+{% endfor %}
 
 {% endblock %}
+Message Input
+
+Message @Edgar
