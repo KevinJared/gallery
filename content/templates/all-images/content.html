@@ -3,7 +3,7 @@
 {% block content %}
 {{block.super}}
 
-<div class="jumbtron" ;>
+<div id="#section01" class="jumbtron" ;>
     <!-- displaying images -->
     <div class="">
         {% for post in images %}
@@ -32,13 +32,9 @@
             </div>
 
             <div class="modal-body">
-                {% for category in post.image_category.all %}
-                <p>{{ category.name }}</p>
-                {% endfor %}
+                <p>{{post.category}}</p>
 
-                {% for location in post.image_location.all %}
-                <p>{{ location.name }}</p>
-                {% endfor %}
+                <p>{{post.location}}</p>
             </div>
 
             <div class="modal-footer">
