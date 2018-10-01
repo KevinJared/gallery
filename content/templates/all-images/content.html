@@ -27,14 +27,15 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="" class="close" data-dismiss="modal">&times;</button>
+                <p><strong>Name:</strong> {{post.image_name}}</p>
                 <img src="{{post.image.url }}" alt="" width="100%">
                 <h4 class="modal-title">{{post.image_description}}</h4>
             </div>
 
             <div class="modal-body">
-                <p>{{post.category}}</p>
+                <p><strong>Category</strong> {{post.category}}</p>
 
-                <p>{{post.location}}</p>
+                <p><strong>Location</strong> {{post.location}}</p>
             </div>
 
             <div class="modal-footer">
