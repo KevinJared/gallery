@@ -26,7 +26,8 @@ SECRET_KEY = 'hapihyx8@tg^*0td37h)k%hhncr+g($p^xfv3dwyj=1nb3fwjo'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'gallerypics1.herokuapp.com'
+    # 'gallerypics1.herokuapp.com'
+    # '127.0.0.1'
 ]
 
 
