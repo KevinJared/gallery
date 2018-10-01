@@ -5,9 +5,7 @@ from . import views
 
 urlpatterns=[
     url(r'^$',views.content_of_day,name='contentToday'),
-    url(r'^archives/(\d{4}-\d{2}-\d{2})/$',views.past_days_content,name = 'pastContent'),
-    url(r'^search/', views.search_results, name='search_results'),   
-    # url(r'^article/(\d+)',views.article,name ='article')
+    url(r'^search/', views.search_results, name='search_results'),
 ]
 
 if settings.DEBUG:
