@@ -4,7 +4,7 @@ from django.test import TestCase
 class LocationTestClass(TestCase):
 
     def setUp(self):
-        self.can = Location(image_location='Canada')
+        self.can = Location(image_location='Kisumu')
 
 
     def test_instance(self):
@@ -16,22 +16,22 @@ class LocationTestClass(TestCase):
         self.assertTrue(len(loc)>0)
 
     def test_delete_method(self):
-        self.test_location = Location(image_location='Canada')
+        self.test_location = Location(image_location='Kisumu')
         self.test_location.save_location()
         self.test_location.delete_location()
         loc = Location.objects.all()
         self.assertTrue(len(loc)<1)
 
     def test_update_method(self):
-        self.test_location = Location(image_location='Canada')
+        self.test_location = Location(image_location='Kisumu')
         self.test_location.save_location()
-        update = Location.update_location('Canada','USA')
-        self.assertTrue(update,'USA')
+        update = Location.update_location('Kisumu','Nairobi')
+        self.assertTrue(update,'Nairobi')
         
 class CategoryTestClass(TestCase):
 
     def setUp(self):
-        self.space = Category(image_category='SpaceX')
+        self.space = Category(image_category='Travel')
 
 
     def test_instance(self):
@@ -43,14 +43,14 @@ class CategoryTestClass(TestCase):
         self.assertTrue(len(space)>0)
 
     def test_delete_method(self):
-        self.test_category = Category(image_category='SpaceX')
+        self.test_category = Category(image_category='Travel')
         self.test_category.save_category()
         self.test_category.delete_category()
         cat = Category.objects.all()
         self.assertTrue(len(cat)<1)
 
     def test_update_method(self):
-        self.test_category = Category(image_category='SpaceX')
+        self.test_category = Category(image_category='Travel')
         self.test_category.save_category()
-        update = Category.update_category('SpaceX','Blue Origin')
-        self.assertTrue(update,'Blue Origin')
+        update = Category.update_category('Travel','Movies')
+        self.assertTrue(update,'Movies')
