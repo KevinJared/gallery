@@ -10,7 +10,7 @@
 <body>
   <nav class="">
     <div class="container-fluid" style=" background-color:crimson;">
-      <div class="col-md-6 navbar-header">
+      <div class="col-md-5 navbar-header">
         <a class="navbar-brand" href="{% url 'contentToday' %}">My Gallery</a>
       </div>
       <div class="col-md-2 dropdown" style="padding-top:15px;">
@@ -32,7 +32,7 @@
         </ul>
       </div>
       <!-- Adding a search form  -->
-      <div class="col-md-2 navbar-right">
+      <div class="col-md-3 navbar-right">
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Image by category" name="image">
