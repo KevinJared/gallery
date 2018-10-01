@@ -1,1 +1,1 @@
-DATABASE_URL='postgres://fshdxzljlepeta:c30038dcbac57d46b916be70b29344c58f9cb4af62b13b50b04a6b161320715e@ec2-174-129-18-98.compute-1.amazonaws.com:5432/djvqdggflj48q'
+# DATABASE_URL='postgres://fshdxzljlepeta:c30038dcbac57d46b916be70b29344c58f9cb4af62b13b50b04a6b161320715e@ec2-174-129-18-98.compute-1.amazonaws.com:5432/djvqdggflj48q'
