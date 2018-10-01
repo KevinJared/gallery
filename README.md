@@ -3,7 +3,10 @@
 #### By **Kevin Jared**
 
 ## Description
-This is a simple photo site where people can view diferent types of images according to category and location..
+This is a simple photo site where people can view diferent types of images according to category and location.
+
+## Live Link
+https://gallerypics1.herokuapp.com/
 
 ## Set Up and Installations
 
