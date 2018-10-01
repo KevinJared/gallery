@@ -10,11 +10,11 @@
 <body>
   <nav class="">
     <div class="container-fluid" style=" background-color:crimson;">
-      <div class="col-md-7 navbar-header">
+      <div class="col-md-6 navbar-header">
         <a class="navbar-brand" href="{% url 'contentToday' %}">My Gallery</a>
       </div>
-      <div class="col-md-1 dropdown" style="padding-top:15px;">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Category <b class="caret"></b></a>
+      <div class="col-md-2 dropdown" style="padding-top:15px;">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Filter By Category <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="#">Travel</a></li>
           <li><a href="#">Food</a></li>
@@ -22,8 +22,8 @@
           <li><a href="#">Fashion</a></li>
         </ul>
       </div>
-      <div class="col-md-1 dropdown" style="padding-top:15px;">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Location <b class="caret"></b></a>
+      <div class="col-md-2 dropdown" style="padding-top:15px;">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Filter By Location <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="#">Kisumu</a></li>
           <li><a href="#">Mombasa</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </div>
       <!-- Adding a search form  -->
-      <div class="col-md-3 navbar-right">
+      <div class="col-md-2 navbar-right">
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Image by category" name="image">
